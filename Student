@@ -1,0 +1,27 @@
+@startuml
+
+entity Student {
+  * StdNo : int
+  StdName : string
+  StdGender : string
+  StdDOB : date
+  StdMail : string
+  StdAdmitDate : date
+}
+
+entity UndStudent {
+  UndMajor : string
+  UndMinor : string
+  UndClass : string
+}
+
+entity GradStudent {
+  GradAdvisor : string
+  GradThesisTitle : string
+  GradAsstStatus : string
+}
+
+Student <|-- UndStudent : generalization
+Student <|-- GradStudent : generalization
+
+@enduml
